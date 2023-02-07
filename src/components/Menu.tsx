@@ -13,8 +13,13 @@ export default function Menu() {
           return (
             <li key={seconds}>
               Sleep for {seconds} second{seconds > 1 ? "s" : ""} with:{" "}
-              <Link href={`/sleep/${seconds}`}>head</Link> |{" "}
-              <Link href={`/sleep-no-head/${seconds}`}>no head</Link>
+              <Link href={`/sync-metadata/${seconds}`}>
+                sync metadata
+              </Link>{" "}
+              |{" "}
+              <Link href={`/async-metadata/${seconds}`}>
+                async metadata
+              </Link>
             </li>
           );
         })}

@@ -1,13 +1,17 @@
 import Menu from "@/components/Menu";
 import { sleep } from "@/components/Utils";
 
-export interface NoSleepPageProps {
+interface NoSleepPageProps {
   params: {
     seconds: string;
   };
 }
 
 export const dynamic = "force-dynamic";
+
+export const metadata = {
+  title: 'Sleep (with sync metadata)'
+};
 
 export default async function NoSleepPage({
   params: { seconds },
